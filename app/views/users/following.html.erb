@@ -1,0 +1,7 @@
+<%= render partial: "shared/tab" %>
+
+<ul class="list-group">
+  <% @following.each do |person_to_follow| %>
+    <li class="list-group-item"><%= person_to_follow.username%></li>
+  <% end %>
+</ul>

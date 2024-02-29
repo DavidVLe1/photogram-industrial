@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @photo %>
+<% @user.own_photos.each do |photo| %>
+  <%= render "photos/photo", photo: photo %>
+<% end %>
 
 <div>
   <%= link_to "Edit this photo", edit_photo_path(@photo) %> |
